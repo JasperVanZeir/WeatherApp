@@ -109,7 +109,45 @@
                <p class="text-[#0d2747] text-xl font-semibold pb-5">Average Weeky Temperature</p>
             </section>
          </div>
-         <div class="w-full divide-y divide-white divide-opacity-30 p-10 sm:w-1/4 bg-gradient-to-br from-[#455770] to-[#183a7d] ">
+         <style>
+            /* Thunderstorm */
+.thunderstorm {
+  background: linear-gradient(to bottom right, #48536a, #0c0e17);
+  color: #FFFFFF;
+}
+
+/* Drizzle */
+.drizzle {
+  background: linear-gradient(to bottom right, #a0a6b4, #3b4972);
+  color: #FFFFFF;
+}
+
+/* Rain */
+.rain {
+  background: linear-gradient(to bottom right, #526184, #0d153a);
+  color: #FFFFFF;
+}
+
+/* Snow */
+.snow {
+  background: linear-gradient(to bottom right, #d9e2ed, #9ab1d4);
+  color: #2b2b2b;
+}
+
+/* Clear */
+.clear {
+  background: linear-gradient(to bottom right, #84c1ff, #0f3c75);
+  color: #FFFFFF;
+}
+
+/* Clouds */
+.clouds {
+  background: linear-gradient(to bottom right, #c7d6e7, #4f6b8a);
+  color: #2b2b2b;
+}
+
+         </style>
+         <div id="sideContainer" class="w-full divide-y divide-white divide-opacity-30 p-10 sm:w-1/4">
             <div>
                <div class="flex items-center justify-between">
                   <div class="space-y-2">
@@ -134,33 +172,33 @@
                </div>
                <div class="w-full space-y-5 pt-5">
                   <div class="flex items-center">
-                     <div class="w-20 text-lg font-normal text-white">7 PM</div>
+                     <div id="time1" class="w-20 text-lg font-normal text-white">??</div>
                      <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
-                        <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 44%"></div>
+                        <div id="value1" class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 0%"></div>
                      </div>
-                     <div class="w-20 text-lg font-normal text-white">44%</div>
+                     <div id="rain1" class="w-20 text-lg font-normal text-white">??</div>
                   </div>
                   <div class="flex items-center">
-                     <div class="w-20 text-lg font-normal text-white">8 PM</div>
-                     <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
-                        <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 30%"></div>
-                     </div>
-                     <div class="w-20 text-lg font-normal text-white">30%</div>
-                  </div>
-                  <div class="flex items-center">
-                     <div class="w-20 text-lg font-normal text-white">9 PM</div>
-                     <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
-                        <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 67%"></div>
-                     </div>
-                     <div class="w-20 text-lg font-normal text-white">67%</div>
-                  </div>
-                  <div class="flex items-center">
-                     <div class="w-20 text-lg font-normal text-white">10 PM</div>
-                     <div class="w-full  mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
-                        <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 72%"></div>
-                     </div>
-                     <div class="w-20 text-lg font-normal text-white">72%</div>
-                  </div>
+                    <div id="time2" class="w-20 text-lg font-normal text-white">??</div>
+                    <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
+                       <div id="value2" class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 0%"></div>
+                    </div>
+                    <div id="rain2" class="w-20 text-lg font-normal text-white">??</div>
+                 </div>
+                 <div class="flex items-center">
+                    <div id="time3" class="w-20 text-lg font-normal text-white">??</div>
+                    <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
+                       <div id="value3" class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 0%"></div>
+                    </div>
+                    <div id="rain3" class="w-20 text-lg font-normal text-white">??</div>
+                 </div>
+                 <div class="flex items-center">
+                    <div id="time4" class="w-20 text-lg font-normal text-white">??</div>
+                    <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
+                       <div id="value4" class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 0%"></div>
+                    </div>
+                    <div id="rain4" class="w-20 text-lg font-normal text-white">??</div>
+                 </div>
                </div>
                <div class="pt-10">
                   <p class="text-white font-normal text-2xl">Sunrise & Sunset</p>
@@ -170,10 +208,10 @@
                            <img class="h-20" src="/src/icons/day.svg" alt="">
                            <div class="space-y-2 pl-2">
                               <p class="text-white text-lg font-light">Sunrise</p>
-                              <p class="text-white text-2xl">4:20 AM</p>
+                              <p id="sunriseTime" class="text-white text-2xl">??</p>
                            </div>
                         </div>
-                        <p class="text-white font-light mr-4">4 hours ago</p>
+                        <p id="sunriseAgo" class="text-white font-light mr-4">??</p>
                      </div>
                   </div>
                   <div class="pt-5">
@@ -182,10 +220,10 @@
                            <img class="h-20" src="/src/icons/night.svg" alt="">
                            <div class="space-y-2 pl-2">
                               <p class="text-white text-lg font-light">Sunset</p>
-                              <p class="text-white text-2xl">5:50 PM</p>
+                              <p id="sunsetTime" class="text-white text-2xl">??</p>
                            </div>
                         </div>
-                        <p class="text-white font-light mr-4">in 9 hours</p>
+                        <p id="sunsetAgo" class="text-white font-light mr-4">??</p>
                      </div>
                   </div>
                </div>
