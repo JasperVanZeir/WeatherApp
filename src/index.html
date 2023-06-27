@@ -6,72 +6,189 @@
       <link href="/dist/output.css" rel="stylesheet">
       <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
       <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+      <script src="index.js"></script>
    </head>
    <body class="font-['Poppins']">
       <div class="flex flex-col sm:flex-row h-screen">
-         <div class="w-full sm:w-1/4">
-            d
-         </div>
-         <div class="w-full sm:w-2/4">
-            d
+         <div class="w-full sm:w-3/4">
+            <nav>
+               <div class="p-8 border justify-between border-gray-200 flex items-center">
+                  <div class="space-y-2">
+                     <p class="text-[#0d2747] font-bold text-3xl">January 2023</p>
+                     <p class="text-gray-500 text-lg">Thursday, Jan 4, 2023</p>
+                  </div>
+                  <form class="w-2/3">
+                     <label for="searchBtn" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                     <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                           <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                           </svg>
+                        </div>
+                        <input type="search" id="locationInput" class="block w-full p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 border-none dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search location here" required>
+                     </div>
+                  </form>
+                  <button class="text-gray-500  rounded-lg bg-gray-100 p-4">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+                     </svg>
+                  </button>
+               </div>
+            </nav>
+            <section class="p-8">
+               <p class="text-[#0d2747] text-xl font-semibold pb-5">Today overview</p>
+               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                     <div class="flex items-center">
+                        <img class="h-20" src="/src/icons/cloudy.svg" alt="">
+                        <div class="space-y-2 pl-2">
+                           <p class="text-gray-400 text-lg font-medium">Wind Speed</p>
+                           <p class="text-black font-medium text-4xl"><span id="windSpeed">??</span><span>km/h</span> </p>
+                        </div>
+                     </div>
+                     <div class="flex gap-3 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-red-700">
+                           <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v16.19l2.47-2.47a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 111.06-1.06l2.47 2.47V3a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                        </svg>
+                        <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
+                     </div>
+                  </div>
+                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                     <div class="flex items-center">
+                        <img class="h-20" src="/src/icons/rainy-6.svg" alt="">
+                        <div class="space-y-2 pl-2">
+                           <p class="text-gray-400 text-lg font-medium">Rain Chance</p>
+                           <p class="text-black font-medium text-4xl"><span id="rainChance">??</span><span>%</span></p>
+                        </div>
+                     </div>
+                     <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
+                  </div>
+                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                     <div class="flex items-center">
+                        <img class="h-20" src="/src/icons/night.svg" alt="">
+                        <div class="space-y-2 pl-2">
+                           <p class="text-gray-400 text-lg font-medium">Pressure</p>
+                           <p class="text-black font-medium text-4xl"><span id="pressure">??</span><span>hpa</span></p>
+                        </div>
+                     </div>
+                     <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
+                  </div>
+                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                     <div class="flex items-center">
+                        <img class="h-20" src="/src/icons/day.svg" alt="">
+                        <div class="space-y-2 pl-2">
+                           <p class="text-gray-400 text-lg font-medium">Uv Index</p>
+                           <p class="text-black font-medium text-4xl">2,3</p>
+                        </div>
+                     </div>
+                     <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
+                  </div>
+                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                    <div class="flex items-center">
+                       <img class="h-20" src="/src/icons/day.svg" alt="">
+                       <div class="space-y-2 pl-2">
+                          <p class="text-gray-400 text-lg font-medium">Uv Index</p>
+                          <p class="text-black font-medium text-4xl">2,3</p>
+                       </div>
+                    </div>
+                    <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
+                 </div>
+                 <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                    <div class="flex items-center">
+                       <img class="h-20" src="/src/icons/day.svg" alt="">
+                       <div class="space-y-2 pl-2">
+                          <p class="text-gray-400 text-lg font-medium">Uv Index</p>
+                          <p class="text-black font-medium text-4xl">2,3</p>
+                       </div>
+                    </div>
+                    <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
+                 </div>
+               </div>
+            </section>
+            <section class="p-8">
+               <p class="text-[#0d2747] text-xl font-semibold pb-5">Average Weeky Temperature</p>
+            </section>
          </div>
          <div class="w-full divide-y divide-white divide-opacity-30 p-10 sm:w-1/4 bg-gradient-to-br from-[#455770] to-[#183a7d] ">
             <div>
                <div class="flex items-center justify-between">
                   <div class="space-y-2">
-                     <p class="text-white text-3xl">Lochristi</p>
-                     <p class="text-white font-light">Oost-Vlaanderen, België</p>
+                     <p id="location" class="text-white text-3xl">??</p>
+                     <p id="country" class="text-white font-light">??</p>
                   </div>
                   <div>
-                     <p class="text-white font-normal text-2xl">08:54 AM</p>
+                     <p id="time" class="text-white font-normal text-2xl">??</p>
                   </div>
                </div>
-               <div class="pt-16 pb-10">
-                  <img class="h-24" src="https://cdn.discordapp.com/attachments/1024194637428183100/1123017112533864628/SunnyRain.png" alt="">
+               <div class="pt-8 pb-8">
+                  <img id="weatherImage" class="h-28" src="/src/icons/cloudy.svg" alt="">
                   <div class="flex items-center justify-between">
-                     <p class="text-white text-7xl">20°C</p>
-                     <p class="text-white text-2xl">Cloudy</p>
+                     <p class="text-white text-7xl"><span id="temperature">??</span><span>°C</span></p>
+                     <p id="description" class="text-white text-2xl">??</p>
                   </div>
                </div>
             </div>
-            <div class="pt-10">
-                <div>
-                    <p class="text-white font-normal text-2xl">Chance of rain</p>
-                </div>
-                <div class="w-full space-y-5 pt-5">
-                    <div class="flex items-center">
-                      <div class="w-20 text-lg font-normal text-white">7 PM</div>
-                      <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
+            <div class="pt-8">
+               <div>
+                  <p class="text-white font-normal text-2xl">Chance of rain</p>
+               </div>
+               <div class="w-full space-y-5 pt-5">
+                  <div class="flex items-center">
+                     <div class="w-20 text-lg font-normal text-white">7 PM</div>
+                     <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
                         <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 44%"></div>
-                      </div>
-                            <div class="w-20 text-lg font-normal text-white">44%</div>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-20 text-lg font-normal text-white">8 PM</div>
-                        <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
-                          <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 30%"></div>
-                        </div>
-                        <div class="w-20 text-lg font-normal text-white">30%</div>
-                      </div>
-                      <div class="flex items-center">
-                        <div class="w-20 text-lg font-normal text-white">9 PM</div>
-                        <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
-                          <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 67%"></div>
-                        </div>
-                        <div class="w-20 text-lg font-normal text-white">67%</div>
-                      </div>
-                      <div class="flex items-center">
-                        <div class="w-20 text-lg font-normal text-white">10 PM</div>
-                        <div class="w-full  mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
-                          <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 72%"></div>
-                        </div>
-                        <div class="w-20 text-lg font-normal text-white">72%</div>
-                      </div>
+                     </div>
+                     <div class="w-20 text-lg font-normal text-white">44%</div>
                   </div>
-                  <div class="pt-10">
-                    <p class="text-white font-normal text-2xl">Sunrise & Sunset</p>
-                    <div></div>
-                </div>
+                  <div class="flex items-center">
+                     <div class="w-20 text-lg font-normal text-white">8 PM</div>
+                     <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
+                        <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 30%"></div>
+                     </div>
+                     <div class="w-20 text-lg font-normal text-white">30%</div>
+                  </div>
+                  <div class="flex items-center">
+                     <div class="w-20 text-lg font-normal text-white">9 PM</div>
+                     <div class="w-full mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
+                        <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 67%"></div>
+                     </div>
+                     <div class="w-20 text-lg font-normal text-white">67%</div>
+                  </div>
+                  <div class="flex items-center">
+                     <div class="w-20 text-lg font-normal text-white">10 PM</div>
+                     <div class="w-full  mr-5 ml-5 bg-gray-200 bg-opacity-20 rounded-full h-8 dark:bg-gray-700">
+                        <div class="bg-[#8cb2fb] h-8 rounded-full dark:bg-primary-500" style="width: 72%"></div>
+                     </div>
+                     <div class="w-20 text-lg font-normal text-white">72%</div>
+                  </div>
+               </div>
+               <div class="pt-10">
+                  <p class="text-white font-normal text-2xl">Sunrise & Sunset</p>
+                  <div class="pt-5">
+                     <div class="p-3 border flex items-center justify-between border-white border-opacity-30 rounded-xl">
+                        <div class="flex items-center">
+                           <img class="h-20" src="/src/icons/day.svg" alt="">
+                           <div class="space-y-2 pl-2">
+                              <p class="text-white text-lg font-light">Sunrise</p>
+                              <p class="text-white text-2xl">4:20 AM</p>
+                           </div>
+                        </div>
+                        <p class="text-white font-light mr-4">4 hours ago</p>
+                     </div>
+                  </div>
+                  <div class="pt-5">
+                     <div class="p-3 border flex items-center justify-between border-white border-opacity-30 rounded-xl">
+                        <div class="flex items-center">
+                           <img class="h-20" src="/src/icons/night.svg" alt="">
+                           <div class="space-y-2 pl-2">
+                              <p class="text-white text-lg font-light">Sunset</p>
+                              <p class="text-white text-2xl">5:50 PM</p>
+                           </div>
+                        </div>
+                        <p class="text-white font-light mr-4">in 9 hours</p>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
