@@ -57,19 +57,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                 sideContainer.classList.remove("thunder", "drizzle", "rain", "snow", "clear", "clouds");
                                 
                                 if (description.textContent === "Thunderstorm") {
-                                    weatherImage.src = "/src/icons/thunder.svg";
+                                    weatherImage.src = "/src/icons/thunderstorms.svg";
                                     sideContainer.classList.add("thunder");
                                 } else if (description.textContent === "Drizzle") {
-                                    weatherImage.src = "/src/icons/rainy-3.svg";
+                                    weatherImage.src = "/src/icons/drizzle.svg";
                                     sideContainer.classList.add("drizzle");
                                 } else if (description.textContent === "Rain") {
-                                    weatherImage.src = "/src/icons/rainy-6.svg";
+                                    weatherImage.src = "/src/icons/rain.svg";
                                     sideContainer.classList.add("rain");
                                 } else if (description.textContent === "Snow") {
-                                    weatherImage.src = "/src/icons/snowy-6.svg";
+                                    weatherImage.src = "/src/icons/snow.svg";
                                     sideContainer.classList.add("snow");
                                 } else if (description.textContent === "Clear") {
-                                    weatherImage.src = "/src/icons/day.svg";
+                                    weatherImage.src = "/src/icons/clear-day.svg";
                                     sideContainer.classList.add("clear");
                                 } else if (description.textContent === "Clouds") {
                                     weatherImage.src = "/src/icons/cloudy.svg";

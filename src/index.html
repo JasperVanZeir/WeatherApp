@@ -25,10 +25,10 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                            </svg>
                         </div>
-                        <input type="search" id="locationInput" class="block w-full p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 border-none dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search location here" required>
+                        <input type="search" id="locationInput" class="block w-full p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 border-none dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search location here" required>
                      </div>
                   </form>
-                  <button class="text-gray-500  rounded-lg bg-gray-100 p-4">
+                  <button class="text-gray-500  rounded-lg bg-gray-50 p-4">
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                         <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
                      </svg>
@@ -38,9 +38,9 @@
             <section class="p-8">
                <p class="text-[#0d2747] text-xl font-semibold pb-5">Today overview</p>
                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                  <div class="p-5 flex items-center justify-between bg-gray-50 rounded-xl">
                      <div class="flex items-center">
-                        <img class="h-20" src="/src/icons/cloudy.svg" alt="">
+                        <img class="h-20" src="/src/icons/wind.svg" alt="">
                         <div class="space-y-2 pl-2">
                            <p class="text-gray-400 text-lg font-medium">Wind Speed</p>
                            <p class="text-black font-medium text-4xl"><span id="windSpeed">??</span><span>km/h</span> </p>
@@ -53,9 +53,9 @@
                         <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
                      </div>
                   </div>
-                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                  <div class="p-5 flex items-center justify-between bg-gray-50 rounded-xl">
                      <div class="flex items-center">
-                        <img class="h-20" src="/src/icons/rainy-6.svg" alt="">
+                        <img class="h-20" src="/src/icons/raindrops.svg" alt="">
                         <div class="space-y-2 pl-2">
                            <p class="text-gray-400 text-lg font-medium">Rain Chance</p>
                            <p class="text-black font-medium text-4xl"><span id="rainChance">??</span><span>%</span></p>
@@ -63,9 +63,9 @@
                      </div>
                      <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
                   </div>
-                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                  <div class="p-5 flex items-center justify-between bg-gray-50 rounded-xl">
                      <div class="flex items-center">
-                        <img class="h-20" src="/src/icons/night.svg" alt="">
+                        <img class="h-20" src="/src/icons/pressure-high.svg" alt="">
                         <div class="space-y-2 pl-2">
                            <p class="text-gray-400 text-lg font-medium">Pressure</p>
                            <p class="text-black font-medium text-4xl"><span id="pressure">??</span><span>hpa</span></p>
@@ -73,9 +73,9 @@
                      </div>
                      <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
                   </div>
-                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                  <div class="p-5 flex items-center justify-between bg-gray-50 rounded-xl">
                      <div class="flex items-center">
-                        <img class="h-20" src="/src/icons/day.svg" alt="">
+                        <img class="h-20" src="/src/icons/uv-index-2.svg" alt="">
                         <div class="space-y-2 pl-2">
                            <p class="text-gray-400 text-lg font-medium">Uv Index</p>
                            <p class="text-black font-medium text-4xl">2,3</p>
@@ -83,19 +83,19 @@
                      </div>
                      <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
                   </div>
-                  <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                  <div class="p-5 flex items-center justify-between bg-gray-50 rounded-xl">
                     <div class="flex items-center">
-                       <img class="h-20" src="/src/icons/day.svg" alt="">
+                       <img class="h-20" src="/src/icons/humidity.svg" alt="">
                        <div class="space-y-2 pl-2">
-                          <p class="text-gray-400 text-lg font-medium">Uv Index</p>
+                          <p class="text-gray-400 text-lg font-medium">Humidity</p>
                           <p class="text-black font-medium text-4xl">2,3</p>
                        </div>
                     </div>
                     <p class="text-gray-400 text-lg font-medium mr-4">in 9 hours</p>
                  </div>
-                 <div class="p-5 flex items-center justify-between bg-gray-100 rounded-xl">
+                 <div class="p-5 flex items-center justify-between bg-gray-50 rounded-xl">
                     <div class="flex items-center">
-                       <img class="h-20" src="/src/icons/day.svg" alt="">
+                       <img class="h-20" src="/src/icons/uv-index-1.svg" alt="">
                        <div class="space-y-2 pl-2">
                           <p class="text-gray-400 text-lg font-medium">Uv Index</p>
                           <p class="text-black font-medium text-4xl">2,3</p>
@@ -205,7 +205,7 @@
                   <div class="pt-5">
                      <div class="p-3 border flex items-center justify-between border-white border-opacity-30 rounded-xl">
                         <div class="flex items-center">
-                           <img class="h-20" src="/src/icons/day.svg" alt="">
+                           <img class="h-20" src="/src/icons/sunrise.svg" alt="">
                            <div class="space-y-2 pl-2">
                               <p class="text-white text-lg font-light">Sunrise</p>
                               <p id="sunriseTime" class="text-white text-2xl">??</p>
@@ -217,7 +217,7 @@
                   <div class="pt-5">
                      <div class="p-3 border flex items-center justify-between border-white border-opacity-30 rounded-xl">
                         <div class="flex items-center">
-                           <img class="h-20" src="/src/icons/night.svg" alt="">
+                           <img class="h-20" src="/src/icons/sunset.svg" alt="">
                            <div class="space-y-2 pl-2">
                               <p class="text-white text-lg font-light">Sunset</p>
                               <p id="sunsetTime" class="text-white text-2xl">??</p>
